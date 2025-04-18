@@ -3,22 +3,20 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
 }
 
-body{
+body, html{
     background-color: #5F2C82;
+    width: 100vw;
+    height: 100vh;
 }
 
 main{
+    position: relative;
     width: 100vw;
     height: 100vh;
-    position: relative;
-}
-
-section{
-    border-radius: 20px;
 }
 
 section#login{
@@ -26,17 +24,47 @@ section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% ,-50%);
     width: 250px;
     height: 515px;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    overflow: hidden;
+
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
 }
 
-section h1, p{
-    text-align: center;
+section#login > div#imagem{
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../imagens/cidade.jpg);
+    width: 250px;
+    height: 200px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+div#formulario{
+    display: block;
+    width: 250px;
+    height: 315px;
     padding: 10px;
 }
 
-div#imagem img{
-    width: 250px;
-    height: 200px;
+div#formulario h1{
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+div#formulario p{
+    font-size: 0.8em;
+}
+
+div.campo{
+    background-color: #5F2C82;
+    border-radius: 5px;
+}
+div.campo input{
+    background-color: #94CFCD;
 }
